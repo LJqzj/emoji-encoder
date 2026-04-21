@@ -7,6 +7,11 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // 项目所有资源、路由原生自带 /emoji-encoder 前缀
+  basePath: '/emoji-encoder',
+	// 保留你项目原有所有配置，无额外修改
+  reactStrictMode: true,
+  output: 'standalone',  // 👈 这一行是修复关键！
   eslint: {
     ignoreDuringBuilds: true,
   },
